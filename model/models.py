@@ -27,7 +27,7 @@ class MachineModel:
                     "nome": m[1],
                     "tipo": m[2],
                     "status": m[3],
-                    "ultima_alteração": m[4].replace(tzinfo=None).isoformat(timespec="seconds")
+                    "ultima_alteracao": m[4].replace(tzinfo=None).isoformat(timespec="seconds")
                 })
             
             return result

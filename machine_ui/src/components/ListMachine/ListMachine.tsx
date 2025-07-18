@@ -98,6 +98,7 @@ export const ListMachine = ({reloadList}: {reloadList: boolean}) => {
                                 <div className={`w-3 h-3 rounded-full ${m.status === "ligada" ? "bg-green-500" : m.status === "desligada" ? "bg-red-600" : "bg-yellow-300"}`}></div>
                             </div>
                             <p>TIPO: {m.tipo}</p>
+                            <p>{m.ultima_alteracao}</p>
                         </div>
                     )}
                 </div>

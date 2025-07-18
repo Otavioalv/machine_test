@@ -6,7 +6,8 @@ export type machineType = {
     id: number, 
     nome: string, 
     status: StatusType,
-    tipo: string
+    tipo: string, 
+    ultima_alteracao: string
 }
 
 export type machineResponseType = {
@@ -18,7 +19,7 @@ export type machineResponseType = {
 export const listMachines = async (): Promise<machineType[]> => {
     try {
         const res = (await machineApi.get("/maquinas")).data as machineResponseType;
-
+        console.log(res)
         return res.list_machines;
     } catch (e) {
         console.log("Erro ao listar >>> ", e);
